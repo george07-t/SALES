@@ -1,0 +1,38 @@
+.bg-footer {
+  background: var(--color-footer) !important;
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-link {
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.footer-link:hover {
+  color: #4CB572;
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .gradient__text {
+    font-size: 1.7rem !important;
+    line-height: 2.1rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .gradient__text {
+    font-size: 1.2rem !important;
+    line-height: 1.5rem !important;
+  }
+}

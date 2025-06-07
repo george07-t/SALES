@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-family: "Manrope", sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #4CB572 1.84%, #135E4B 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #CCDCDB -13.86%, #A1D8B5 99.55%);
+  --navbar-height: 72px;
+  --color-bg: #CCDCDB;
+  --color-footer: #135E4B;
+  --color-blog: #A1D8B5;
+  --color-text: #135E4B;
+  --color-subtext: #4CB572;
+}
+/* Add your responsive navbar height here */
+@media screen and (max-width: 700px) {
+  :root {
+    --navbar-height: 56px;
+  }
+}
+@media screen and (max-width: 550px) {
+  :root {
+    --navbar-height: 48px;
+  }
+}

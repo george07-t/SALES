@@ -1,0 +1,15 @@
+.sprc__blog-container {
+  scrollbar-width: thin;
+  scrollbar-color: #a1d8b5 #f8fafc;
+  -webkit-overflow-scrolling: touch;
+}
+.sprc__blog-container::-webkit-scrollbar {
+  height: 8px;
+}
+.sprc__blog-container::-webkit-scrollbar-thumb {
+  background: #a1d8b5;
+  border-radius: 4px;
+}
+.sprc__blog-container::-webkit-scrollbar-track {
+  background: #f8fafc;
+}

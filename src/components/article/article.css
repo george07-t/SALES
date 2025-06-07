@@ -1,0 +1,27 @@
+.bg-footer {
+  background: var(--color-footer) !important;
+}
+.card-title {
+  color: #fff;
+}
+.card-body, .card-body p {
+  color: #fff;
+  font-family: var(--font-family);
+}
+.card-img-top.object-fit-cover {
+  object-fit: cover;
+}
+.card-title {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  display: block;
+  max-width: 100%;
+}
+@media screen and (max-width: 550px) {
+  .card-title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

@@ -1,0 +1,108 @@
+.bg-footer {
+  background: #135E4B !important;
+}
+
+.font-manrope {
+  font-family: var(--font-family), sans-serif !important;
+}
+.stylish-brand {
+  background: linear-gradient(90deg, #4CB572 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(19,94,75,0.12);
+}
+#scroll-progress-bar {
+  position: fixed;
+  top: 71px; /* Adjust based on your navbar height */
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4CB572 0%, #135E4B 100%);
+  z-index: 1100; /* higher than navbar */
+  transition: width 0.2s;
+}
+.nav-link-custom {
+  color: #fff !important;
+  position: relative;
+  transition: color 0.2s;
+  font-family: var(--font-family), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0;
+  padding-bottom: 2px;
+}
+
+.nav-link-custom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #4CB572;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+  width: 100%;
+}
+
+.nav-link-custom.active {
+  color: #4CB572 !important;
+}
+
+.btn-orange {
+  background: #ff4820 !important;
+  color: #fff !important;
+  border: 2px solid #ff4820 !important;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+  background: #d13c13 !important;
+  color: #fff !important;
+  border-color: #d13c13 !important;
+}
+
+.btn-outline-orange {
+  background: transparent !important;
+  color: #ff4820 !important;
+  border: 2px solid #ff4820 !important;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:focus {
+  background: #ff4820 !important;
+  color: #fff !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #135E4B;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+  .navbar-nav {
+    gap: 0 !important;
+  }
+  .d-flex.ms-lg-3 {
+    margin-left: 0 !important;
+  }
+}

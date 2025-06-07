@@ -1,0 +1,22 @@
+.amount-btn.selected {
+  background: #4CB572 !important;
+  color: #fff !important;
+  border-color: #135E4B !important;
+}
+.donate-btn {
+  background: linear-gradient(90deg, #4CB572 0%, #135E4B 100%) !important;
+  color: #fff !important;
+  border: none !important;
+}
+.donate-btn:hover {
+  background: linear-gradient(90deg, #135E4B 0%, #4CB572 100%) !important;
+}
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.donation-desc {
+  color: #4CB572;
+}
