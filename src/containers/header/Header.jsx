@@ -17,8 +17,10 @@ const Header = () => {
           SALES – Society for Achieve Leadership Empowerment for People with Stroke
         </h1>
         <p>
-          SALES has been empowering individuals with disabilities, especially stroke and paralysis patients, since 1988. We focus on building an inclusive society through health awareness, rehabilitation, and medical support. Committed to marginalized communities, SALES provides resources and educates the public on stroke prevention and rehabilitation, working with partners to foster positive change.
+          Since 1988, SALES has been empowering individuals with disabilities, especially stroke and paralysis patients. We aim to build an inclusive society through health awareness, rehabilitation, and medical support. SALES is committed to marginalized communities, providing resources and educating the public on stroke prevention, while working with partners to foster positive change.
         </p>
+
+
         <div className="sprc__header-content__input">
           <button type="button" onClick={handleClick}>Get Started</button>
         </div>
