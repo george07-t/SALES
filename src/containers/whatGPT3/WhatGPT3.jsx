@@ -8,10 +8,11 @@ const WhatGPT3 = () => {
       <div className="sprc__whatgpt3-feature">
         <Feature
           title="About SALES"
-          text="SALES, Barishal, was founded in 1988 by a passionate group of individuals who were dedicated to serving humanity. The organization’s mission is to facilitate various developmental programs for persons with disabilities, the handicapped, the impoverished, and marginalized communities.
-  
-  In its early years, SALES worked alongside organizations such as YMCA, CCDB, and World Vision Bangladesh, focusing on disaster management, relief distribution, women and child nutrition, and health education. Following the passing of its founder, SALES faced a brief suspension of activities. However, under new leadership, the organization has resumed its operations, continuing to carry forward the founder's vision. Today, SALES collaborates with partners such as SPRC Barishal, SHOMOTA Inclusive School, Generation Bangladesh, and BBDC, working to improve the lives of children and individuals with physical and mental disabilities, as well as those affected by stroke and paralysis."
+          text="SALES, Barishal, was founded in 1988 by a group of dedicated individuals committed to serving humanity. The organization’s mission is to empower marginalized and vulnerable communities, especially children and persons with disabilities, by providing inclusive health, education, and livelihood services.
+
+In its early years, SALES collaborated with organizations such as YMCA, CCDB, and World Vision Bangladesh, focusing on disaster management, relief distribution, women and child nutrition, and health education. After the passing of its founder, SALES experienced a brief pause in its activities. However, under new leadership, the organization has resumed its mission, upholding the founder's vision of dignity and equity for all. Today, SALES partners with SPRC Barishal, SHOMOTA Inclusive School, Generation Bangladesh, and BBDC to improve the lives of children and individuals with physical and intellectual disabilities, as well as those affected by stroke and paralysis."
         />
+
 
       </div>
       <div className="sprc__whatgpt3-heading">

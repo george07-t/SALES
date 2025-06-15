@@ -14,11 +14,12 @@ const Header = () => {
     <div className="sprc__header section__padding">
       <div className="sprc__header-content">
         <h1 className="gradient__text">
-          SALES – Society for Achieve Leadership Empowerment for People with Stroke
+          SALES – Social Advancement for Livelihood and Educational Support
         </h1>
         <p>
-          Since 1988, SALES has been empowering individuals with disabilities, especially stroke and paralysis patients. We aim to build an inclusive society through health awareness, rehabilitation, and medical support. SALES is committed to marginalized communities, providing resources and educating the public on stroke prevention, while working with partners to foster positive change.
+          At Social Advancement for Livelihood and Educational Support (SALES), we empower marginalized and vulnerable communities, particularly children and persons with disabilities, by providing inclusive health, education, and livelihood services. Our holistic programs address physical, emotional, and economic needs through rehabilitation, educational support, skill-building, and advocacy. Rooted in compassion, community participation, and sustainable development, SALES strives to promote social equity, dignity, and independence, ensuring lasting positive impact in the lives we serve.
         </p>
+
 
 
         <div className="sprc__header-content__input">
