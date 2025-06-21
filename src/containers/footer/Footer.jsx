@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./footer.css";
-import sprcLogo from "../../assets/SPRCHeader.png";
+import sprcLogo from "../../assets/SPRCHeader1.png";
 import FooterModal from "../../components/footermodel/FooterModal";
 import ReactMarkdown from "react-markdown";
 import termsMd from "../../assets/Document/TermCondition.md";

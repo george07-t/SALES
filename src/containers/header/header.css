@@ -99,8 +99,11 @@
   align-items: center;
 }
 .sprc__header-image img {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #edece7; /* Optional: set a background color */
 }
 
 @media screen and (max-width: 1050px) {

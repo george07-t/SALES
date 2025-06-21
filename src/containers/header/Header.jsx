@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import ai from "../../assets/SPRCHeader.png";
+import ai from "../../assets/SPRCHeader1.png";
 
 const Header = () => {
   const handleClick = () => {
@@ -17,7 +17,7 @@ const Header = () => {
           SALES – Social Advancement for Livelihood and Educational Support
         </h1>
         <p>
-          At Social Advancement for Livelihood and Educational Support (SALES), we empower marginalized and vulnerable communities, particularly children and persons with disabilities, by providing inclusive health, education, and livelihood services. Our holistic programs address physical, emotional, and economic needs through rehabilitation, educational support, skill-building, and advocacy. Rooted in compassion, community participation, and sustainable development, SALES strives to promote social equity, dignity, and independence, ensuring lasting positive impact in the lives we serve.
+          SALES empowers marginalized communities, especially children and disabled individuals, through inclusive health, education, and livelihood services. Their holistic programs address physical, emotional, and economic needs through rehabilitation, education, skill-building, and advocacy. Founded on compassion, community participation, and sustainable development, SALES promotes social equity, dignity, and independence, ensuring lasting positive impact.
         </p>
 
 

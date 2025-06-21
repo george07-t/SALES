@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "../../assets/LogoSalesSprc.jpg";
+import logo from "../../assets/LogoSalesSprc.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import GetInvolvedModal from "../getinvolvedmodal/GetInvolvedModal";
