@@ -4,7 +4,8 @@ import { Article } from "../../components";
 import {
   blog011, blog012, blog013, blog21, blog22, blog23, blog31, blog32, blog33, blog41, blog42, blog43, blog44,
   blogbg1, blogbg2, blogbg3, blogbg4, blogpsis11, blogpsis12, blogpsis13, blogpsis14, blogpsis15, blogpsis16, blogpsis17,
-  blogrd11, blogrd12, blogrd13, blogrd14, blogrd15
+  blogrd11, blogrd12, blogrd13, blogrd14, blogrd15, blogbgc20, blogbgc21, blogbgc22,
+  blogstp51, blogstp52, blogstp53, blogstp54
 } from "./imports";
 import "./blog.css";
 
@@ -52,6 +53,19 @@ const blogPosts = [
     ],
   },
   {
+    date: "july 26, 2024",
+    heading: "Stroke Awareness Program 5",
+    sections: [
+      {
+        images: [blogstp51, blogstp52],
+        text: "Stroke Prevention and Rehabilitation Program Statement July 2024 to June 2025. SALES successfully conducted a total of 12 awareness programs collaborating with SPRC, Barishal between 2024 and 2025, focusing on stroke prevention, health education, and community engagement. Through these programs, nearly 320 people gained valuable knowledge about stroke prevention, and three health camps were organized with SPRC Team to provide free medical and physiotherapy services, during which around 35 patients received physiotherapy treatment and consultation. Furthermore, SALES provided extended free physiotherapy treatment support to 5 patients at SPRC, Barishal, with each patient completing an average of 15 sessions as part of their rehabilitation process."
+      }, {
+        images: [blogstp53, blogstp54],
+        text: "Some program detail given bellow, On June 16, 2024, John Tilock Sarkar, General Secretary of SALES, led a health awareness session among lay members of the Barisal Catholic Church, organized by the Catholic Health Commission and supported by SALES, with 18 participants. In September 2024, he conducted another session focused on stroke awareness with medical personnel from various hospitals, also under the Catholic Church Health Commission. As part of the monthly awareness campaign, on May 20, 2025, a program was held at SPRC, Barishal, engaging 20 youths in discussions on stroke prevention and inspiring community action. On May 26, 2025, SALES organized an awareness session at the Catholic Church, where representatives distributed stroke prevention leaflets among priests, nuns, nurses, volunteers, and clerks. On the same day, SALES held a strategic meeting with NSDA, a prominent volunteer group in Barishal, where both organizations agreed to work jointly on stroke prevention and rehabilitation efforts in the city."
+      }
+    ],
+  },
+  {
     date: "Mar 15, 2024",
     heading: "Program with Shomota Inclusive School",
     sections: [
@@ -72,6 +86,16 @@ const blogPosts = [
       {
         images: [blogbg1, blogbg2, blogbg3, blogbg4],
         text: "In December 2024, about 85 disabled and poor children of Shomata School along with 25 of their parents, a total of 110 people, underwent blood group testing, with the support of BBDC, SPRC Barishal. The program was organized by Sales."
+      }
+    ],
+  },
+  {
+    date: "March 15, 2024",
+    heading: "Health and Support Activities",
+    sections: [
+      {
+        images: [blogbgc20, blogbgc21, blogbgc22],
+        text: "Summary of Health and Support Activities for Disabled Children and Families Organized by SALES(Social Advancement for Livelihood and Educational Support) SALES was working with Shomota Inclusive School for their disable children and poor student health and their wellbeing.We were conducting two health camp, physiotherapy treatment camp, blood grouping camp, awareness camp and eye checkup camp for those students and their parents.In detail it is describe in bellow. In December 2024, with the support of BBDC and SPRC Barishal, a blood group testing program was conducted for around 85 disabled and underprivileged children of Shomota Inclusive School, along with 25 parents, totaling 110 participants.This health initiative aimed to support basic medical documentation and care planning. In March 2025, SALES organized a medical and physiotherapy camp in the Kashipur area, where over 35 disadvantaged individuals received primary healthcare and physiotherapy services.The camp featured a Medical Doctor, a Female Physiotherapist, and was coordinated by Juji, who also distributed stroke awareness leaflets to all attendees. Additionally, in March 2024, the Church of Bangladesh organized a special program at Shomota Inclusive School, Kashipur, focused on the health and well- being of disabled children and their families.In this event, SALES provided treatment guidance, motivational counseling, and psychological support.The program was honored by the presence of Bishop Folia and Pranton Bodho, the founder of Shomota School. SALES also conducts monthly physiotherapy camps at Shomota Inclusive School, consistently supporting disabled children with therapeutic care and follow- up services."
       }
     ],
   },

@@ -27,10 +27,19 @@ import blogrd12 from "../../assets/blogphoto/rd12.jpg";
 import blogrd13 from "../../assets/blogphoto/rd13.jpg";
 import blogrd14 from "../../assets/blogphoto/rd14.jpg";
 import blogrd15 from "../../assets/blogphoto/rd15.jpg";
+import blogbgc20 from "../../assets/blogphoto/bgc20.jpg";
+import blogbgc21 from "../../assets/blogphoto/bgc21.jpg";
+import blogbgc22 from "../../assets/blogphoto/bgc22.jpg";
+import blogstp51 from "../../assets/blogphoto/stp51.jpg";
+import blogstp52 from "../../assets/blogphoto/stp52.jpg";
+import blogstp53 from "../../assets/blogphoto/stp53.jpg";
+import blogstp54 from "../../assets/blogphoto/stp54.jpg";
+
 
 export { blog011, blog012, blog013, blog21, blog22, blog23, 
     blog31, blog32, blog33, blog41, blog42, blog43, blog44,
     blogbg1, blogbg2, blogbg3, blogbg4,
     blogpsis11, blogpsis12, blogpsis13, blogpsis14, blogpsis15, blogpsis16, blogpsis17,
-    blogrd11, blogrd12, blogrd13, blogrd14, blogrd15
+    blogrd11, blogrd12, blogrd13, blogrd14, blogrd15, blogbgc20, blogbgc21, blogbgc22,
+    blogstp51, blogstp52, blogstp53, blogstp54
 };
