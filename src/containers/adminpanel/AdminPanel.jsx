@@ -11,6 +11,8 @@ const AdminPanel = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [login, setLogin] = useState({ username: "", password: "" });
   const [loginError, setLoginError] = useState("");
+  const [loginLoading, setLoginLoading] = useState(false);
+
   const [blog, setBlog] = useState({
     title: "",
     date: "",
@@ -30,6 +32,7 @@ const AdminPanel = () => {
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
+    setLoginLoading(true);
     const auth = getAuth();
     try {
       await signInWithEmailAndPassword(auth, login.username, login.password);
@@ -37,6 +40,8 @@ const AdminPanel = () => {
       setLoginError("");
     } catch (error) {
       setLoginError("Invalid email or password");
+    } finally {
+      setLoginLoading(false);
     }
   };
 
@@ -98,8 +103,15 @@ const AdminPanel = () => {
   // Prevent entering the admin page without login
   if (!isAuthenticated) {
     return (
-      <div className="admin-login-modal d-flex align-items-center justify-content-center vh-100 bg-light position-fixed top-0 start-0 w-100" style={{ zIndex: 1050 }}>
-        <form className="admin-login-form card shadow p-4" style={{ minWidth: 320, maxWidth: 380 }} onSubmit={handleLoginSubmit}>
+      <div
+        className="admin-login-modal d-flex align-items-center justify-content-center vh-100 bg-light position-fixed top-0 start-0 w-100"
+        style={{ zIndex: 1050 }}
+      >
+        <form
+          className="admin-login-form card shadow p-4"
+          style={{ minWidth: 320, maxWidth: 380 }}
+          onSubmit={handleLoginSubmit}
+        >
           <h2 className="mb-3 text-center">Admin Login</h2>
           <div className="mb-3">
             <input
@@ -124,8 +136,27 @@ const AdminPanel = () => {
               required
             />
           </div>
-          {loginError && <div className="alert alert-danger py-1 mb-2">{loginError}</div>}
-          <button type="submit" className="btn btn-success w-100">Login</button>
+          {loginError && (
+            <div className="alert alert-danger py-1 mb-2">{loginError}</div>
+          )}
+          <button
+            type="submit"
+            className="btn btn-success w-100"
+            disabled={loginLoading}
+          >
+            {loginLoading ? (
+              <>
+                <span
+                  className="spinner-border spinner-border-sm me-2"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Logging in...
+              </>
+            ) : (
+              "Login"
+            )}
+          </button>
         </form>
       </div>
     );
@@ -134,9 +165,18 @@ const AdminPanel = () => {
   return (
     <>
       <Navbar />
-      <div className="admin-panel container py-5">
-        <h2 className="mb-4">Blog Uploader</h2>
-        <form className="admin-blog-form card shadow p-4 mx-auto" style={{ maxWidth: 600 }} onSubmit={handleBlogSubmit}>
+      {/* Add marginTop to push below navbar */}
+      <div className="admin-panel container py-5" style={{ marginTop: 70 }}>
+        <h2 className="mb-4 fw-bold text-center" style={{ color: "#135E4B", letterSpacing: "1px" }}>
+  Blog Uploader
+</h2>
+
+
+        <form
+          className="admin-blog-form card shadow p-4 mx-auto"
+          style={{ maxWidth: 600 }}
+          onSubmit={handleBlogSubmit}
+        >
           <div className="mb-3">
             <label className="form-label">Section Title</label>
             <input
@@ -194,10 +234,29 @@ const AdminPanel = () => {
               </div>
             )}
           </div>
-          {uploadSuccess && <div className="alert alert-success">{uploadSuccess}</div>}
-          {uploadError && <div className="alert alert-danger">{uploadError}</div>}
-          <button type="submit" className="btn btn-success mt-2 w-100" disabled={uploading}>
-            {uploading ? "Uploading..." : "Upload"}
+          {uploadSuccess && (
+            <div className="alert alert-success">{uploadSuccess}</div>
+          )}
+          {uploadError && (
+            <div className="alert alert-danger">{uploadError}</div>
+          )}
+          <button
+            type="submit"
+            className="btn btn-success mt-2 w-100"
+            disabled={uploading}
+          >
+            {uploading ? (
+              <>
+                <span
+                  className="spinner-border spinner-border-sm me-2"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Uploading...
+              </>
+            ) : (
+              "Upload"
+            )}
           </button>
         </form>
       </div>

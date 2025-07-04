@@ -6,10 +6,29 @@ import Navbar from "../../components/navbar/Navbar";
 import { Helmet } from "react-helmet-async";
 import { getDatabase, ref as dbRef, get } from "firebase/database";
 
+// Helper: Split array into chunks
+function chunkArray(arr, chunkSize) {
+  const result = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    result.push(arr.slice(i, i + chunkSize));
+  }
+  return result;
+}
+
+// Helper: Split text into sentences (handles English punctuation)
+function splitTextIntoSentences(text) {
+  if (!text) return [];
+  // Split on . ! ? followed by space or end of string, but keep the punctuation
+  return text
+    .replace(/\r\n|\r|\n/g, " ") // Remove line breaks
+    .split(/(?<=[.?!])\s+(?=[A-Z])/)
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
 const BlogPost = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  // Try to get postId from location.state or URL param
   const { postId: paramPostId } = useParams();
   const postId = location.state?.postId || paramPostId;
   const [post, setPost] = useState(null);
@@ -21,7 +40,6 @@ const BlogPost = () => {
       navigate("/#blog", { replace: true });
       return;
     }
-    // Fetch the blog post from Firebase
     const fetchPost = async () => {
       setLoading(true);
       try {
@@ -30,7 +48,6 @@ const BlogPost = () => {
         const snapshot = await get(postRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          // Ensure sections structure for backward compatibility
           setPost({
             ...data,
             sections: data.sections
@@ -83,13 +100,14 @@ const BlogPost = () => {
     );
   }
 
-  // Generate a meta description from the first section or a default
+  // Meta description
   const metaDescription =
     post.sections && post.sections.length > 0 && post.sections[0].text
       ? post.sections[0].text.substring(0, 150) +
         (post.sections[0].text.length > 150 ? "..." : "")
       : "Read the latest blog post from SALES – Social Advancement for Livelihood and Educational Support.";
 
+  // Main rendering
   return (
     <>
       <Helmet>
@@ -114,28 +132,47 @@ const BlogPost = () => {
         </button>
         <h1 className="gradient__text mb-2">{post.title}</h1>
         {post.date && <p className="text-muted mb-4">{post.date}</p>}
-        {post.sections.map((section, idx) => (
-          <div key={idx} className="mb-4">
-            {section.images && section.images.length > 0 && (
-              <div className="d-flex flex-row flex-nowrap overflow-auto gap-3 mb-3">
-                {section.images.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={post.title + " " + (idx + 1) + " image " + (i + 1)}
-                    className="img-fluid blogpost-image shadow"
-                    style={{ maxWidth: 300, height: "auto" }}
-                  />
-                ))}
-              </div>
-            )}
-            {section.text && (
-              <div className="fs-5" style={{ whiteSpace: "pre-line" }}>
-                {section.text}
-              </div>
-            )}
-          </div>
-        ))}
+
+        {post.sections.map((section, idx) => {
+          // Split images and sentences into chunks
+          const images = Array.isArray(section.images) ? section.images : [];
+          const sentences = splitTextIntoSentences(section.text);
+
+          const imageChunks = chunkArray(images, 3);
+          const sentenceChunks = chunkArray(sentences, 5);
+
+          // The number of rows to render is the max of imageChunks and sentenceChunks
+          const rows = Math.max(imageChunks.length, sentenceChunks.length);
+
+          return (
+            <div key={idx} className="mb-4">
+              {[...Array(rows)].map((_, rowIdx) => (
+                <div key={rowIdx} className="mb-3">
+                  {/* Images row */}
+                  {imageChunks[rowIdx] && imageChunks[rowIdx].length > 0 && (
+                    <div className="d-flex flex-row flex-nowrap overflow-auto gap-3 mb-2">
+                      {imageChunks[rowIdx].map((img, i) => (
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`${post.title} section ${idx + 1} image ${rowIdx * 3 + i + 1}`}
+                          className="img-fluid blogpost-image shadow"
+                          style={{ maxWidth: 300, height: "auto" }}
+                        />
+                      ))}
+                    </div>
+                  )}
+                  {/* Text chunk */}
+                  {sentenceChunks[rowIdx] && sentenceChunks[rowIdx].length > 0 && (
+                    <div className="fs-5 mb-2" style={{ whiteSpace: "pre-line" }}>
+                      {sentenceChunks[rowIdx].join(" ")}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </>
