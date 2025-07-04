@@ -91,6 +91,7 @@ const Footer = () => {
                 </button>
               </li>
               <li><a href="#possibility" className="footer-link">Donations</a></li>
+              <li><a href="/admin" className="footer-link">Admin</a></li>
             </ul>
           </div>
           <div className="col-12 col-lg-3">

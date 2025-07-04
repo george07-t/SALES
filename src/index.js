@@ -10,15 +10,21 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BlogPost from "./containers/blogpost/BlogPost";
+import AdminPanel from "./containers/adminpanel/AdminPanel";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/blogpost",
+    path: "/blogpost/:postId",
     element: <BlogPost />,
   },
+  {
+    path: "/admin",
+    element: <AdminPanel />,
+  }
+  
 
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
